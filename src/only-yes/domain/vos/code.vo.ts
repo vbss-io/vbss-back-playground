@@ -1,8 +1,6 @@
 export class Code {
   private readonly value: string
-  constructor (
-    length = 5
-  ) {
+  constructor(length = 5) {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
     let code = ''
     for (let i = 0; i < length; i++) {
@@ -12,7 +10,7 @@ export class Code {
     this.value = code
   }
 
-  getValue (): string {
+  getValue(): string {
     return this.value
   }
 }
