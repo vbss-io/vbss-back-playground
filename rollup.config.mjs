@@ -18,7 +18,8 @@ const config = [
         extensions: ['.js', '.ts']
       }),
       nodeResolve({
-        preferBuiltins: true
+        preferBuiltins: true,
+        exportConditions: ['node']
       }),
       json()
     ]
