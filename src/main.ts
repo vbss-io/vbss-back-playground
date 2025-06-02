@@ -1,19 +1,28 @@
 import 'dotenv/config'
-import 'express-async-errors'
 
-import { OnlyYesModule } from '@/only-yes/application/OnlyYesModule'
-import { StatusModule } from '@api/application/StatusModule'
-import { Registry } from '@api/infra/dependency-injection/Registry'
-import { ExpressErrorHandler } from '@api/infra/errors/ErrorHandler'
-import { ExpressAdapter } from '@api/infra/http/ExpressAdapter'
+import { CommunicationCenterModule } from '@/communication-center/application/modules/portfolio.module'
+import { OnlyYesModule } from '@/only-yes/application/only-yes.module'
+import { StatusModule } from '@api/application/modules/status.module'
+import { ExpressAdapter } from '@api/infra/adapters/http/express-adapter'
+import { WinstonLoggerAdapter } from '@api/infra/adapters/logger/winston-logger-adapter'
+import { NodemailerAdapter } from '@api/infra/adapters/mailer/nodemailer-adapter'
+import { Registry } from '@api/infra/dependency-injection/registry'
+import { ExpressErrorHandler } from '@api/infra/handlers/express-error-handler'
+import { ExpressHttpLoggerHandler } from '@api/infra/handlers/express-http-logger-handler'
 
-function main (): any {
-  const errorHandler = new ExpressErrorHandler()
-  Registry.getInstance().provide('errorHandler', errorHandler)
+const PORT = Number(process.env.PORT ?? 3000)
+
+function main(): void {
+  const registry = Registry.getInstance()
+  registry.provide('httpLoggerHandler', new ExpressHttpLoggerHandler())
+  registry.provide('errorHandler', new ExpressErrorHandler())
+  registry.provide('logger', new WinstonLoggerAdapter())
+  registry.provide('mailer', new NodemailerAdapter())
   const httpServer = new ExpressAdapter()
-  Registry.getInstance().provide('httpServer', httpServer)
+  registry.provide('httpServer', httpServer)
   new StatusModule()
   new OnlyYesModule()
-  httpServer.start(Number(process.env.PORT))
+  new CommunicationCenterModule()
+  httpServer.start(PORT)
 }
 main()
