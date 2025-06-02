@@ -4,7 +4,8 @@
 
 ## 🔗 Projetos relacionados  
 
-- **[Only Yes](https://github.com/vbss-io/only-yes)**: Um aplicativo web para criar questões de "Sim ou Não", disponível em [yes.vbss.io](https://yes.vbss.io).
+- **[vbss.io](https://vbss.io)**: Portfólio pessoal.
+- **[Only Yes](https://github.com/vbss-io/only-yes)**: Aplicativo web para criar questões de "Sim" ou "Não", disponível em [yes.vbss.io](https://yes.vbss.io).
 
 ## 💻 Tecnologias utilizadas  
 
@@ -12,7 +13,3 @@
 - **Framework**: Express  
 - **Banco de dados**: MongoDB  
 - **Conceitos aplicados**: Clean Code, Clean Architecture, DDD, Injeção de Dependências  
-
-## 🌟 Contribuição  
-
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests neste repositório.  
