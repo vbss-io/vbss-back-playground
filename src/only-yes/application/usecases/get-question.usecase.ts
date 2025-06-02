@@ -1,4 +1,4 @@
-import { inject } from '@/@api/infra/dependency-injection/registry'
+import { inject } from '@/api/infra/dependency-injection/registry'
 import { Question } from '@/only-yes/domain/entities/question.entity'
 import { QuestionNotFoundError } from '@/only-yes/domain/errors/question.error'
 import { type QuestionRepository } from '@/only-yes/domain/repositories/question.repository'

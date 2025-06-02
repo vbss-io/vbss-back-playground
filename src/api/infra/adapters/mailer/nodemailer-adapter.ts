@@ -1,9 +1,9 @@
 import nodemailer from 'nodemailer'
 
-import { MailerError } from '@api/domain/errors/catalog.errors'
-import { Logger } from '@api/domain/providers/logger/logger'
-import { Mailer } from '@api/domain/providers/mailer/mailer'
-import { inject } from '@api/infra/dependency-injection/registry'
+import { MailerError } from '@/api/domain/errors/catalog.errors'
+import { Logger } from '@/api/domain/providers/logger/logger'
+import { Mailer } from '@/api/domain/providers/mailer/mailer'
+import { inject } from '@/api/infra/dependency-injection/registry'
 
 export class NodemailerAdapter implements Mailer {
   @inject('logger')

@@ -1,8 +1,8 @@
 import mongoose from 'mongoose'
 
-import { DatabaseConnectionCloseError, DatabaseConnectionError } from '@api/domain/errors/catalog.errors'
-import { Logger } from '@api/domain/providers/logger/logger'
-import { inject } from '@api/infra/dependency-injection/registry'
+import { DatabaseConnectionCloseError, DatabaseConnectionError } from '@/api/domain/errors/catalog.errors'
+import { Logger } from '@/api/domain/providers/logger/logger'
+import { inject } from '@/api/infra/dependency-injection/registry'
 
 export interface DatabaseConnection {
   connect: () => Promise<void>

@@ -1,5 +1,5 @@
-import { HttpStatusCodes } from '@api/domain/enums/http/http-status-codes'
-import { CustomError } from '@api/domain/errors/custom-error'
+import { HttpStatusCodes } from '@/api/domain/enums/http/http-status-codes'
+import { CustomError } from '@/api/domain/errors/custom-error'
 
 export class NotFoundError extends CustomError {
   constructor() {

@@ -2,7 +2,7 @@ import commonjs from '@rollup/plugin-commonjs'
 import json from '@rollup/plugin-json'
 import { nodeResolve } from '@rollup/plugin-node-resolve'
 import typescript from '@rollup/plugin-typescript'
-import tsconfigPaths from 'rollup-plugin-tsconfig-paths'
+// import tsconfigPaths from 'rollup-plugin-tsconfig-paths'
 
 const config = [
   {
@@ -12,7 +12,7 @@ const config = [
       format: 'cjs'
     },
     plugins: [
-      tsconfigPaths(),
+      // tsconfigPaths(),
       typescript({
         tsconfig: './tsconfig.json'
       }),

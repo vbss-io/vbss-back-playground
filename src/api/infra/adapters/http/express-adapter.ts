@@ -2,13 +2,13 @@
 import cors from 'cors'
 import express, { type Application, type NextFunction, type Request, type RequestHandler, type Response } from 'express'
 
-import { corsOptions } from '@api/domain/consts/cors-options.const'
-import { HttpMethod } from '@api/domain/enums/http/http-methods'
-import { NotFoundError } from '@api/domain/errors/catalog.errors'
-import { Logger } from '@api/domain/providers/logger/logger'
-import { inject } from '@api/infra/dependency-injection/registry'
-import { ErrorHandler } from '@api/infra/handlers/express-error-handler'
-import { HttpLoggerHandler } from '@api/infra/handlers/express-http-logger-handler'
+import { corsOptions } from '@/api/domain/consts/cors-options.const'
+import { HttpMethod } from '@/api/domain/enums/http/http-methods'
+import { NotFoundError } from '@/api/domain/errors/catalog.errors'
+import { Logger } from '@/api/domain/providers/logger/logger'
+import { inject } from '@/api/infra/dependency-injection/registry'
+import { ErrorHandler } from '@/api/infra/handlers/express-error-handler'
+import { HttpLoggerHandler } from '@/api/infra/handlers/express-http-logger-handler'
 
 type RequestParams = any
 type Headers = Record<string, string | string[] | undefined>

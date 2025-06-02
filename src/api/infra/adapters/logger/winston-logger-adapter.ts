@@ -1,6 +1,6 @@
 import winston from 'winston'
 
-import type { Logger } from '@api/domain/providers/logger/logger'
+import type { Logger } from '@/api/domain/providers/logger/logger'
 
 const levels = {
   error: 0,

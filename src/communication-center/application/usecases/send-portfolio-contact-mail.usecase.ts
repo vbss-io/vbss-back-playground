@@ -1,6 +1,6 @@
+import { Mailer } from '@/api/domain/providers/mailer/mailer'
+import { inject } from '@/api/infra/dependency-injection/registry'
 import { SendPortfolioEmailType } from '@/communication-center/infra/validates/send-portfolio-email.validate'
-import { Mailer } from '@api/domain/providers/mailer/mailer'
-import { inject } from '@api/infra/dependency-injection/registry'
 
 export type SendPortfolioContactMailUsecaseInput = SendPortfolioEmailType
 

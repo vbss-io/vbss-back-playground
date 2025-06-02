@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from 'express'
 
-import { Logger } from '@api/domain/providers/logger/logger'
-import { inject } from '@api/infra/dependency-injection/registry'
+import { Logger } from '@/api/domain/providers/logger/logger'
+import { inject } from '@/api/infra/dependency-injection/registry'
 
 export interface HttpLoggerHandler {
   handle: (req: Request, res: Response, next: NextFunction) => void

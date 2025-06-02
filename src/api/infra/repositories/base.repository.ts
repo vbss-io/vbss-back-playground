@@ -1,7 +1,7 @@
 import type { Document, FilterQuery, Model } from 'mongoose'
 
-import { DatabaseEntityNotFound } from '@api/domain/errors/catalog.errors'
-import type { BaseRepository } from '@api/domain/repositories/base.repository'
+import { DatabaseEntityNotFound } from '@/api/domain/errors/catalog.errors'
+import type { BaseRepository } from '@/api/domain/repositories/base.repository'
 
 export abstract class BaseRepositoryMongoose<T extends Document, D> implements BaseRepository<T, D> {
   constructor(protected readonly model: Model<T>) {}

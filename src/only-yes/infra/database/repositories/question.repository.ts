@@ -1,7 +1,7 @@
+import { BaseRepositoryMongoose } from '@/api/infra/repositories/base.repository'
 import { Question } from '@/only-yes/domain/entities/question.entity'
 import { type QuestionRepository } from '@/only-yes/domain/repositories/question.repository'
 import { type QuestionDocument, QuestionModel } from '@/only-yes/infra/database/schemas/question.schema'
-import { BaseRepositoryMongoose } from '@api/infra/repositories/base.repository'
 
 export class QuestionRepositoryMongoose
   extends BaseRepositoryMongoose<QuestionDocument, Question>
