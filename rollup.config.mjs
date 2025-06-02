@@ -12,7 +12,7 @@ const config = [
     },
     plugins: [
       typescript({
-        tsconfig: './tsconfig.build.json'
+        tsconfig: './tsconfig.json'
       }),
       commonjs({
         extensions: ['.js', '.ts']

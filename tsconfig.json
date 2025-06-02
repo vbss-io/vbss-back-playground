@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es2020",
+    "target": "es2021",
     "module": "commonjs",
     "paths": {
       "@/*": [
@@ -9,9 +9,6 @@
       "@api/*": [
         "./src/@api/*"
       ],
-      "@cron/*": [
-        "./src/@cron/*"
-      ]
     },
     "outDir": "./build",
     "resolveJsonModule": true,
@@ -19,6 +16,7 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   }
 }
