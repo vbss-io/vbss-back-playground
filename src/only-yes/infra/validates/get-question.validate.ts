@@ -7,4 +7,4 @@ export const GetQuestionSchema = z.object({
   })
 })
 
-export type GetQuestionInput = z.infer<typeof GetQuestionSchema>
+export type GetQuestionType = z.infer<typeof GetQuestionSchema>
